@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>保湿剤比較 | ヒルドイド・ヘパリン類似物質</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f9fc;
+  --white: #ffffff;
+  --primary: #1a6fa8;
+  --primary-light: #e8f2fa;
+  --primary-mid: #c8dff2;
+  --accent: #0d9488;
+  --accent-light: #e0f5f2;
+  --danger: #dc3545;
+  --danger-light: #fff5f5;
+  --warn: #e67e22;
+  --warn-light: #fff9f0;
+  --text: #1e2a35;
+  --text-mid: #4a5a6a;
+  --text-light: #7a8a9a;
+  --border: #d4dde8;
+  --border-light: #eaf0f7;
+  --shadow: 0 2px 12px rgba(26,111,168,0.08);
+  --shadow-lg: 0 4px 24px rgba(26,111,168,0.13);
+  --radius: 10px;
+  --radius-lg: 16px;
+
+  /* product colors */
+  --cream: #d4a836;
+  --cream-light: #fffdf0;
+  --soft: #5b8dd9;
+  --soft-light: #f0f5ff;
+  --lotion: #3bab7c;
+  --lotion-light: #f0faf6;
+  --foam: #9b59b6;
+  --foam-light: #f8f2fd;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--white);
+  border-bottom: 2px solid var(--primary);
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-icon {
+  width: 38px; height: 38px;
+  background: var(--primary);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+header h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+header p {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* ── NAV TABS ── */
+.nav-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 72px;
+  z-index: 99;
+}
+.nav-tabs {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 4px;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 12px 18px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--primary); background: var(--primary-light); }
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 700;
+}
+
+/* ── MAIN ── */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+/* ── SECTION ── */
+.section { display: none; }
+.section.active { display: block; }
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-mid);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .icon { font-size: 20px; }
+
+/* ── PRODUCT CARDS GRID ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+.product-card-header {
+  padding: 14px 16px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-badge {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.product-card-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.product-card-header span {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.product-card-body {
+  padding: 0 16px 16px;
+}
+.card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 12.5px;
+}
+.card-row:last-child { border-bottom: none; }
+.card-row .label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  min-width: 72px;
+  padding-top: 1px;
+  flex-shrink: 0;
+}
+.card-row .val { color: var(--text); flex: 1; }
+
+/* product colors */
+.card-cream .product-badge { background: var(--cream-light); }
+.card-cream .product-card-header h3 { color: var(--cream); }
+.card-cream { border-color: #e8d48a; }
+
+.card-soft .product-badge { background: var(--soft-light); }
+.card-soft .product-card-header h3 { color: var(--soft); }
+.card-soft { border-color: #b3c8f0; }
+
+.card-lotion .product-badge { background: var(--lotion-light); }
+.card-lotion .product-card-header h3 { color: var(--lotion); }
+.card-lotion { border-color: #9dd8bc; }
+
+.card-foam .product-badge { background: var(--foam-light); }
+.card-foam .product-card-header h3 { color: var(--foam); }
+.card-foam { border-color: #c9a8e0; }
+
+/* ── TABLE ── */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 580px;
+}
+thead th {
+  background: var(--primary);
+  color: #fff;
+  padding: 11px 13px;
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+thead th:first-child { border-radius: var(--radius-lg) 0 0 0; }
+thead th:last-child { border-radius: 0 var(--radius-lg) 0 0; }
+tbody tr { border-bottom: 1px solid var(--border-light); transition: background 0.15s; }
+tbody tr:hover { background: var(--primary-light); }
+tbody td {
+  padding: 10px 13px;
+  font-size: 12.5px;
+  vertical-align: top;
+}
+tbody td:first-child { font-weight: 600; color: var(--primary); }
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 2px 2px 2px 0;
+}
+.tag-green { background: var(--accent-light); color: var(--accent); }
+.tag-blue { background: var(--primary-light); color: var(--primary); }
+.tag-orange { background: var(--warn-light); color: var(--warn); }
+.tag-purple { background: #f3eafd; color: #7c3aed; }
+.tag-red { background: var(--danger-light); color: var(--danger); }
+.tag-gray { background: #f0f2f5; color: var(--text-mid); }
+
+/* ── SITE SELECTOR ── */
+.site-guide {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.site-guide h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.site-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+.site-item h4 { font-size: 12.5px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+.site-item p { font-size: 12px; color: var(--text-mid); }
+
+/* ── FEEL BARS ── */
+.feel-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.feel-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.feel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.feel-label { width: 140px; font-size: 12.5px; font-weight: 600; flex-shrink: 0; }
+.feel-bar-wrap { flex: 1; }
+.feel-bar-track {
+  background: var(--border-light);
+  border-radius: 20px;
+  height: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.feel-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+.feel-score { width: 30px; text-align: right; font-size: 12px; color: var(--text-mid); font-weight: 700; }
+
+.feel-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-light);
+}
+.feel-legend-item { display: flex; align-items: center; gap: 5px; }
+.feel-legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* ── GENERIC DRUGS TABLE ── */
+.generic-section {
+  margin-bottom: 24px;
+}
+.generic-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 10px;
+  padding: 0;
+}
+.generic-note {
+  background: var(--warn-light);
+  border-left: 3px solid var(--warn);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-bottom: 14px;
+}
+
+/* ── CAUTION BOXES ── */
+.caution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.caution-card {
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid;
+}
+.caution-card.red { background: var(--danger-light); border-color: #f5b8bc; }
+.caution-card.orange { background: var(--warn-light); border-color: #f5d0a9; }
+.caution-card.blue { background: var(--primary-light); border-color: var(--primary-mid); }
+.caution-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.caution-card.red h4 { color: var(--danger); }
+.caution-card.orange h4 { color: var(--warn); }
+.caution-card.blue h4 { color: var(--primary); }
+.caution-card ul { padding-left: 16px; }
+.caution-card li { font-size: 12px; color: var(--text-mid); margin-bottom: 4px; }
+
+/* ── GUIDE CARD ── */
+.guide-card {
+  background: var(--primary-light);
+  border: 1px solid var(--primary-mid);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+}
+.guide-card strong { color: var(--primary); }
+
+/* ── FOOTER NOTE ── */
+.footer-note {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 16px;
+  font-size: 11px;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+/* ── INGREDIENTS ── */
+.ing-alert {
+  background: #fff8e1;
+  border-left: 4px solid #f9a825;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.ing-alert strong { color: #c47d00; }
+.ing-section-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 24px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid var(--primary-mid);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ing-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.ing-card-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+.ing-product-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ing-card-header h3 { font-size: 13.5px; font-weight: 700; }
+.ing-card-header .ing-type { font-size: 11px; color: var(--text-light); margin-left: auto; background: var(--bg); padding: 2px 8px; border-radius: 20px; border: 1px solid var(--border); white-space: nowrap; }
+.ing-body { padding: 14px 16px; }
+.ing-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 12.5px;
+}
+.ing-row:last-child { border-bottom: none; }
+.ing-row .ilabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  min-width: 80px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.ing-row .ival { flex: 1; line-height: 1.6; }
+.ing-pill {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 2px 2px 2px 0;
+}
+.ip-blue { background: var(--primary-light); color: var(--primary); }
+.ip-green { background: var(--accent-light); color: var(--accent); }
+.ip-red { background: var(--danger-light); color: var(--danger); }
+.ip-orange { background: var(--warn-light); color: #b35a00; }
+.ip-purple { background: #f3eafd; color: #7c3aed; }
+.ip-gray { background: #f0f2f5; color: var(--text-mid); }
+.ip-yellow { background: #fffde7; color: #8a6a00; }
+
+.diff-banner {
+  background: linear-gradient(135deg, #fff0f3 0%, #fff8e1 100%);
+  border: 1.5px solid #f5c6cb;
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.diff-banner h3 { font-size: 14px; font-weight: 700; color: #b02a37; margin-bottom: 10px; }
+.diff-banner ul { padding-left: 18px; }
+.diff-banner li { font-size: 12.5px; color: var(--text-mid); margin-bottom: 6px; line-height: 1.6; }
+.diff-banner li strong { color: var(--text); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  header h1 { font-size: 14px; }
+  .tab-btn { padding: 10px 12px; font-size: 12px; }
+  main { padding: 14px 10px 30px; }
+  .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .feel-label { width: 110px; font-size: 11.5px; }
+  .caution-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 16px; }
+}
+@media (max-width: 380px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">💧</div>
+    <div>
+      <h1>保湿剤比較　ヒルドイド・ヘパリン類似物質</h1>
+      <p>やまもと皮膚科・漢方クリニック　処方参考資料</p>
+    </div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="showTab('overview')">📋 剤形一覧</button>
+    <button class="tab-btn" onclick="showTab('comparison')">📊 特性比較</button>
+    <button class="tab-btn" onclick="showTab('ingredients')">🔬 成分比較</button>
+    <button class="tab-btn" onclick="showTab('sites')">🗺 部位別選択</button>
+    <button class="tab-btn" onclick="showTab('feel')">✋ 使用感</button>
+    <button class="tab-btn" onclick="showTab('generics')">💊 後発品・薬価</button>
+    <button class="tab-btn" onclick="showTab('caution')">⚠️ 禁忌・注意</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ① 剤形一覧 -->
+<section id="overview" class="section active">
+  <div class="section-title"><span class="icon">📋</span>剤形別　製品概要</div>
+
+  <div class="guide-card">
+    ヒルドイド（先発品）とヘパリン類似物質（後発品）は主成分が同一。<br>
+    剤形の違いが<strong>基剤の性質・使用感・適応部位</strong>を大きく左右する。
+  </div>
+
+  <div class="product-grid">
+
+    <!-- クリーム -->
+    <div class="product-card card-cream">
+      <div class="product-card-header">
+        <div class="product-badge">🟡</div>
+        <div>
+          <h3>ヒルドイドクリーム 0.3%</h3>
+          <span>Hirudoid Cream</span>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <div class="card-row"><span class="label">基剤</span><span class="val">水中油型（O/W）エマルション</span></div>
+        <div class="card-row"><span class="label">外観</span><span class="val">白色〜淡黄色の乳状</span></div>
+        <div class="card-row"><span class="label">含水量</span><span class="val">約70%（高い）</span></div>
+        <div class="card-row"><span class="label">べたつき</span><span class="val">少ない ★★☆☆</span></div>
+        <div class="card-row"><span class="label">保湿力</span><span class="val">中〜高 ★★★☆</span></div>
+        <div class="card-row"><span class="label">薬価(先発)</span><span class="val">約16.6円/g</span></div>
+      </div>
+    </div>
+
+    <!-- ソフト軟膏 -->
+    <div class="product-card card-soft">
+      <div class="product-card-header">
+        <div class="product-badge">🔵</div>
+        <div>
+          <h3>ヒルドイドソフト軟膏 0.3%</h3>
+          <span>Hirudoid Soft Ointment</span>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <div class="card-row"><span class="label">基剤</span><span class="val">油中水型（W/O）乳剤性軟膏</span></div>
+        <div class="card-row"><span class="label">外観</span><span class="val">白色の軟膏状</span></div>
+        <div class="card-row"><span class="label">含水量</span><span class="val">約25%（中）</span></div>
+        <div class="card-row"><span class="label">べたつき</span><span class="val">やや多い ★★★☆</span></div>
+        <div class="card-row"><span class="label">保湿力</span><span class="val">高 ★★★★</span></div>
+        <div class="card-row"><span class="label">薬価(先発)</span><span class="val">約16.6円/g</span></div>
+      </div>
+    </div>
+
+    <!-- ローション -->
+    <div class="product-card card-lotion">
+      <div class="product-card-header">
+        <div class="product-badge">🟢</div>
+        <div>
+          <h3>ヒルドイドローション 0.3%</h3>
+          <span>Hirudoid Lotion</span>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <div class="card-row"><span class="label">基剤</span><span class="val">水性ローション（O/W）</span></div>
+        <div class="card-row"><span class="label">外観</span><span class="val">白色の流動性乳液</span></div>
+        <div class="card-row"><span class="label">含水量</span><span class="val">約80%以上（最高）</span></div>
+        <div class="card-row"><span class="label">べたつき</span><span class="val">ほぼなし ★☆☆☆</span></div>
+        <div class="card-row"><span class="label">規格</span><span class="val">25g・50g・<strong>150g（ポンプ付）</strong><br><small style="color:var(--accent);">★2025年6月発売・1プッシュ≒1g（2FTU）</small></span></div>
+        <div class="card-row"><span class="label">薬価(先発)</span><span class="val">約14.6円/mL</span></div>
+      </div>
+    </div>
+
+    <!-- 泡 -->
+    <div class="product-card card-foam">
+      <div class="product-card-header">
+        <div class="product-badge">🟣</div>
+        <div>
+          <h3>ヒルドイドフォーム 0.3%</h3>
+          <span>Hirudoid Foam</span>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <div class="card-row"><span class="label">基剤</span><span class="val">泡状エアゾール（O/W系）</span></div>
+        <div class="card-row"><span class="label">外観</span><span class="val">白色泡状（噴霧後）</span></div>
+        <div class="card-row"><span class="label">含水量</span><span class="val">高い（泡：消えると薄膜）</span></div>
+        <div class="card-row"><span class="label">べたつき</span><span class="val">ほぼなし ★☆☆☆</span></div>
+        <div class="card-row"><span class="label">保湿力</span><span class="val">中 ★★☆☆</span></div>
+        <div class="card-row"><span class="label">規格</span><span class="val">原液 <strong>92g</strong>缶（金属製エアゾール缶）</span></div>
+        <div class="card-row"><span class="label">薬価(先発)</span><span class="val">約43.5円/g</span></div>
+      </div>
+    </div>
+
+  </div><!-- /product-grid -->
+</section>
+
+<!-- ② 特性比較 -->
+<section id="comparison" class="section">
+  <div class="section-title"><span class="icon">📊</span>剤形特性　比較表</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>🟡 クリーム</th>
+          <th>🔵 ソフト軟膏</th>
+          <th>🟢 ローション</th>
+          <th>🟣 フォーム（泡）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>基剤タイプ</td>
+          <td>O/W（水中油型）</td>
+          <td>W/O（油中水型）</td>
+          <td>O/W（水性）</td>
+          <td>O/W系エアゾール</td>
+        </tr>
+        <tr>
+          <td>保湿持続性</td>
+          <td><span class="tag tag-blue">中〜高</span></td>
+          <td><span class="tag tag-green">最高</span></td>
+          <td><span class="tag tag-orange">中</span></td>
+          <td><span class="tag tag-orange">中</span></td>
+        </tr>
+        <tr>
+          <td>べたつき感</td>
+          <td><span class="tag tag-blue">少ない</span></td>
+          <td><span class="tag tag-orange">やや多い</span></td>
+          <td><span class="tag tag-green">ほぼなし</span></td>
+          <td><span class="tag tag-green">ほぼなし</span></td>
+        </tr>
+        <tr>
+          <td>塗布のしやすさ</td>
+          <td>◎ 広範囲○</td>
+          <td>○ やや伸ばしにくい</td>
+          <td>◎ 広範囲○</td>
+          <td>◎◎ 触れずに塗布可</td>
+        </tr>
+        <tr>
+          <td>毛髪部への使用</td>
+          <td>△</td>
+          <td>△（整髪料様）</td>
+          <td>○</td>
+          <td>◎（頭皮向き）</td>
+        </tr>
+        <tr>
+          <td>洗い流しやすさ</td>
+          <td>○</td>
+          <td>△（油性残る）</td>
+          <td>◎</td>
+          <td>◎</td>
+        </tr>
+        <tr>
+          <td>小児・乳幼児</td>
+          <td>◎</td>
+          <td>○</td>
+          <td>○</td>
+          <td>△（噴射音・圧）</td>
+        </tr>
+        <tr>
+          <td>顔・頸部</td>
+          <td>◎</td>
+          <td>△（閉塞性）</td>
+          <td>◎</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>体幹・四肢（広範）</td>
+          <td>◎</td>
+          <td>○</td>
+          <td>◎</td>
+          <td>◎</td>
+        </tr>
+        <tr>
+          <td>乾燥・ひびわれ強い</td>
+          <td>○</td>
+          <td>◎◎</td>
+          <td>△</td>
+          <td>△</td>
+        </tr>
+        <tr>
+          <td>滲出液・湿潤病変</td>
+          <td>△</td>
+          <td>✕（閉塞・悪化）</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>アドヒアランス</td>
+          <td>○</td>
+          <td>△（使用感で敬遠）</td>
+          <td>◎</td>
+          <td>◎（簡便性高い）</td>
+        </tr>
+        <tr>
+          <td>薬価（目安）</td>
+          <td>約16.6円/g</td>
+          <td>約16.6円/g</td>
+          <td>約14.6円/mL</td>
+          <td>約43.5円/g（<strong>92g</strong>缶・後発は100g/200gボトル）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ③ 成分比較 -->
+<section id="ingredients" class="section">
+  <div class="section-title"><span class="icon">🔬</span>先発品・後発品　添加物成分比較</div>
+
+  <div class="ing-alert">
+    ⚠️ <strong>重要：</strong>有効成分（ヘパリン類似物質 3.0mg/g）は全製品で同一。ただし<strong>添加物・基剤タイプが製品間で異なり</strong>、使用感・アレルギーリスクに影響する。
+  </div>
+
+  <!-- 先発・後発対応表 -->
+  <div style="background:var(--white);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);">
+    <div style="font-size:14px;font-weight:700;color:var(--primary);margin-bottom:14px;display:flex;align-items:center;gap:8px;">🔗 先発品 ↔ 後発品　正しい対応関係</div>
+    <div class="table-wrap" style="margin-bottom:0;">
+      <table>
+        <thead>
+          <tr>
+            <th>先発品（マルホ）</th>
+            <th>基剤タイプ</th>
+            <th>対応する後発品の名称</th>
+            <th>注意点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ヒルドイドクリーム 0.3%</td>
+            <td><span class="tag tag-blue">O/W型</span></td>
+            <td>ヘパリン類似物質<strong>クリーム</strong>「〇〇」<br><small style="color:var(--text-light);">（「油性」の文字なし）</small></td>
+            <td>さらっとした使用感</td>
+          </tr>
+          <tr style="background:#fff8f0;">
+            <td>ヒルドイドソフト軟膏 0.3%</td>
+            <td><span class="tag tag-orange">W/O型</span></td>
+            <td>ヘパリン類似物質<strong>油性クリーム</strong>「〇〇」<br><small style="color:var(--text-light);">（「油性」が付く）</small></td>
+            <td>べたつき・保湿強め</td>
+          </tr>
+          <tr>
+            <td>ヒルドイドローション 0.3%</td>
+            <td><span class="tag tag-blue">O/W乳液型</span></td>
+            <td>ヘパリン類似物質<strong>ローション</strong>「〇〇」<br><small style="color:var(--text-light);">（水性タイプ・使用感が異なる）</small></td>
+            <td>後発は水性でさらにさらっと</td>
+          </tr>
+          <tr>
+            <td>ヒルドイドフォーム 0.3%</td>
+            <td><span class="tag tag-green">水性エアゾール</span></td>
+            <td>ヘパリン類似物質<strong>外用泡状スプレー</strong>「〇〇」</td>
+            <td>組成に若干差あり</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:12px;color:var(--danger);font-weight:600;">⚠️「クリーム」と「油性クリーム」は別の先発品に対応。取り違えると基剤タイプが逆転し、患者の使用感が大きく変わります。</p>
+  </div>
+
+  <div class="diff-banner">
+    <h3>🚨 処方・調剤で注意すべき差異ポイント</h3>
+    <ul>
+      <li><strong>「クリーム」≠「油性クリーム」：</strong>後発品の名称に「油性」が付くかどうかで先発品が異なる。処方箋・調剤時に必ず確認。</li>
+      <li><strong>ラノリンアルコール：</strong>ヒルドイドクリーム（先発）のみ含有。ラノリン過敏患者には後発O/Wクリームを。</li>
+      <li><strong>サラシミツロウ：</strong>ニプロ油性クリーム・ヒルドイドソフト軟膏のみ。日医工油性クリームは非含有。</li>
+      <li><strong>パラベン類：</strong>全製品に含有。パラベンフリーの選択肢はこのグループにはない。</li>
+      <li><strong>ローション先発の処方変更（2024年7月）：</strong>先発ローションが乳液タイプに変更。後発水性ローションとは使用感がさらに乖離した。</li>
+    </ul>
+  </div>
+
+  <!-- ① クリーム系 -->
+  <div class="ing-section-label">🟡 クリーム系</div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#d4a836;"></div>
+      <h3>ヒルドイドクリーム 0.3%（マルホ・先発）</h3>
+      <span class="ing-type">O/W型（水中油型）</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-blue">水中油型 O/W</span> 含水量多・べたつき少</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">グリセリン</span>
+          <span class="ing-pill ip-gray">ステアリン酸</span>
+          <span class="ing-pill ip-gray">水酸化カリウム</span>
+          <span class="ing-pill ip-gray">白色ワセリン</span>
+          <span class="ing-pill ip-orange">ラノリンアルコール ⚠</span>
+          <span class="ing-pill ip-gray">セトステアリルアルコール</span>
+          <span class="ing-pill ip-gray">セトステアリル硫酸Na混合物</span>
+          <span class="ing-pill ip-gray">ミリスチルアルコール</span>
+          <span class="ing-pill ip-gray">イソプロパノール</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル（メチルパラベン）</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル（プロピルパラベン）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival" style="color:var(--warn);">ラノリンアルコール含有（ラノリン過敏患者に注意）。先発品でO/W型唯一のクリーム。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#1a6fa8;"></div>
+      <h3>ヘパリン類似物質<u>油性</u>クリーム 0.3%「日医工」（後発）</h3>
+      <span class="ing-type">← ソフト軟膏の後発 W/O型</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-purple">油中水型 W/O</span> ソフト軟膏と同系統・保湿持続高い</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">濃グリセリン</span>
+          <span class="ing-pill ip-gray">スクワラン</span>
+          <span class="ing-pill ip-gray">軽質流動パラフィン</span>
+          <span class="ing-pill ip-gray">パラフィン</span>
+          <span class="ing-pill ip-gray">マイクロクリスタリンワックス</span>
+          <span class="ing-pill ip-gray">白色ワセリン</span>
+          <span class="ing-pill ip-gray">グリセリン脂肪酸エステル</span>
+          <span class="ing-pill ip-blue">ジブチルヒドロキシトルエン（BHT・酸化防止剤）</span>
+          <span class="ing-pill ip-blue">エデト酸ナトリウム水和物（EDTA）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival" style="color:var(--accent);">サラシミツロウ非含有。ラノリン不含。先発クリームとは基剤タイプが異なるため、切り替え時に使用感が変わることを患者に説明要。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#3bab7c;"></div>
+      <h3>ヘパリン類似物質<u>油性</u>クリーム 0.3%「ニプロ」（後発）</h3>
+      <span class="ing-type">← ソフト軟膏の後発 W/O型</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-purple">油中水型 W/O</span> 日医工と同系統</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">濃グリセリン</span>
+          <span class="ing-pill ip-gray">スクワラン</span>
+          <span class="ing-pill ip-gray">軽質流動パラフィン</span>
+          <span class="ing-pill ip-gray">パラフィン</span>
+          <span class="ing-pill ip-gray">マイクロクリスタリンワックス</span>
+          <span class="ing-pill ip-gray">白色ワセリン</span>
+          <span class="ing-pill ip-orange">サラシミツロウ ★</span>
+          <span class="ing-pill ip-gray">グリセリン脂肪酸エステル</span>
+          <span class="ing-pill ip-blue">ジブチルヒドロキシトルエン（BHT）</span>
+          <span class="ing-pill ip-blue">エデト酸ナトリウム水和物</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival" style="color:var(--warn);">サラシミツロウ含有（日医工との差異）。ミツバチ由来成分過敏の方は注意。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② ソフト軟膏系 -->
+  <div class="ing-section-label">🔵 ソフト軟膏系　※後発品名は「<u>油性</u>クリーム」</div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#5b8dd9;"></div>
+      <h3>ヒルドイドソフト軟膏 0.3%（マルホ・先発）</h3>
+      <span class="ing-type">W/O型（油中水型）</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-purple">油中水型 W/O</span> 保湿持続最高・閉塞性あり</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">グリセリン</span>
+          <span class="ing-pill ip-gray">スクワラン</span>
+          <span class="ing-pill ip-gray">軽質流動パラフィン</span>
+          <span class="ing-pill ip-gray">パラフィン</span>
+          <span class="ing-pill ip-gray">マイクロクリスタリンワックス</span>
+          <span class="ing-pill ip-gray">白色ワセリン</span>
+          <span class="ing-pill ip-orange">サラシミツロウ ★</span>
+          <span class="ing-pill ip-gray">グリセリン脂肪酸エステル</span>
+          <span class="ing-pill ip-blue">ジブチルヒドロキシトルエン（BHT）</span>
+          <span class="ing-pill ip-blue">エデト酸ナトリウム水和物（EDTA）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival">サラシミツロウ含有（ニプロ油性クリームと同組成に近い）。後発W/O型クリームと基剤はほぼ同系。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ ローション系 -->
+  <div class="ing-section-label">🟢 ローション系（乳液型 vs 水性型）</div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#3bab7c;"></div>
+      <h3>ヒルドイドローション 0.3%（マルホ・先発）</h3>
+      <span class="ing-type">O/W型（乳液タイプ・2024年処方変更後）</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-blue">O/W型 乳液タイプ</span> 2024年処方変更で現処方</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">グリセリン</span>
+          <span class="ing-pill ip-gray">セタノール</span>
+          <span class="ing-pill ip-gray">ミリスチルアルコール</span>
+          <span class="ing-pill ip-gray">白色ワセリン</span>
+          <span class="ing-pill ip-gray">スクワラン</span>
+          <span class="ing-pill ip-gray">セトマクロゴール1000</span>
+          <span class="ing-pill ip-gray">モノステアリン酸グリセリン</span>
+          <span class="ing-pill ip-blue">ジイソプロパノールアミン（pH調節）</span>
+          <span class="ing-pill ip-blue">カルボキシビニルポリマー（増粘）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival" style="color:var(--primary);">2024年7月処方変更で成分変更。乳液タイプ（O/W）のため、後発水性ローションとは使用感が異なる。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#7a8a9a;"></div>
+      <h3>ヘパリン類似物質ローション 0.3%「ニプロ」（後発）</h3>
+      <span class="ing-type">水性タイプ</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-green">水性タイプ</span> 化粧水に近いサラサラ感</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">カルボキシビニルポリマー</span>
+          <span class="ing-pill ip-gray">ヒプロメロース（HPMC）</span>
+          <span class="ing-pill ip-gray">1,3-ブチレングリコール</span>
+          <span class="ing-pill ip-gray">濃グリセリン</span>
+          <span class="ing-pill ip-gray">ポリオキシエチレン・ポリオキシプロピレングリコール</span>
+          <span class="ing-pill ip-blue">2,2',2''-ニトリロトリエタノール（TEA・pH調節）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival">油性成分なし・水性基剤。先発乳液タイプより軽い使用感。皮脂量が多い部位・夏季に適する。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ing-card" style="border-color:#a0c4a0;">
+    <div class="ing-card-header" style="background:#f4faf4;">
+      <div class="ing-product-dot" style="background:#3a7d44;"></div>
+      <h3>ヘパリン類似物質ローション 0.3%「ニットー」（後発・乳液タイプ）</h3>
+      <span class="ing-type" style="background:#e8f5e9;color:#2e7d32;border-color:#a5d6a7;">← 乳液タイプ・パラベン代替</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-blue">O/W型 乳液タイプ</span> 先発ローションに近い使用感（2024年6月発売）</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-green">チモール（パラベン非含有）★</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">チモールとは</span>
+        <span class="ival">タイム（百里香）由来のフェノール系化合物。うがい薬・歯科薬品に使われるハーブ系の独特な芳香を持つ。パラベン感作患者への代替として有用だが、<strong>匂いを気にする患者・顔への使用では注意</strong>。</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">臨床メモ</span>
+        <span class="ival" style="color:var(--accent);">このグループで<strong>唯一のパラベンフリー製剤</strong>。パラベン接触アレルギーが疑われる患者に選択肢となる。ただし匂いの受け入れを事前確認のこと。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ フォーム系 -->
+  <div class="ing-section-label">🟣 フォーム系（エアゾール）</div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#9b59b6;"></div>
+      <h3>ヒルドイドフォーム 0.3%（マルホ・先発）</h3>
+      <span class="ing-type">水性エアゾール（噴射剤：LPG）</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-blue">水性（噴霧後）</span> 噴射剤LPG（可燃性）</span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物（原液）</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">グリセリン</span>
+          <span class="ing-pill ip-gray">マクロゴール</span>
+          <span class="ing-pill ip-gray">ポリソルベート65</span>
+          <span class="ing-pill ip-gray">ポリオキシエチレンベヘニルエーテル</span>
+          <span class="ing-pill ip-blue">pH調節剤</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">噴射剤</span>
+        <span class="ival"><span class="ing-pill ip-red">LPG（液化石油ガス・可燃性）⚠ 火気厳禁</span></span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival">
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸メチル</span>
+          <span class="ing-pill ip-yellow">パラオキシ安息香酸プロピル</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival">油性成分最小・皮膜形成型。後発泡スプレーと類似組成だがヒアルロン酸Na等は非含有。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ing-card">
+    <div class="ing-card-header">
+      <div class="ing-product-dot" style="background:#c0a0d0;"></div>
+      <h3>ビーソフテン泡スプレー（テイコクファルマケア・後発相当品）</h3>
+      <span class="ing-type">水性エアゾール</span>
+    </div>
+    <div class="ing-body">
+      <div class="ing-row">
+        <span class="ilabel">基剤タイプ</span>
+        <span class="ival"><span class="ing-pill ip-blue">水性（噴霧後）</span></span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">主要添加物</span>
+        <span class="ival">
+          <span class="ing-pill ip-gray">グリセリン</span>
+          <span class="ing-pill ip-gray">D-ソルビトール</span>
+          <span class="ing-pill ip-gray">ポリオキシエチレン・ポリオキシプロピレングリコール</span>
+          <span class="ing-pill ip-gray">マクロゴール</span>
+          <span class="ing-pill ip-gray">ヒプロメロース</span>
+          <span class="ing-pill ip-green">精製ヒアルロン酸ナトリウム ★先発にない成分</span>
+          <span class="ing-pill ip-blue">クエン酸水和物・クエン酸Na水和物（pH調節）</span>
+        </span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">防腐剤</span>
+        <span class="ival"><span class="ing-pill ip-yellow">メチルパラベン</span><span class="ing-pill ip-yellow">プロピルパラベン</span></span>
+      </div>
+      <div class="ing-row">
+        <span class="ilabel">特記</span>
+        <span class="ival" style="color:var(--accent);">ヒアルロン酸Na配合（先発フォームにない追加成分）。D-ソルビトール配合で保湿補助。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 総括比較表 -->
+  <div class="ing-section-label">📋 添加物特性　一覧表</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>成分・特性</th>
+          <th>ヒルドイド<br>クリーム</th>
+          <th>後発<br>油性クリーム<br>（日医工）</th>
+          <th>後発<br>油性クリーム<br>（ニプロ）</th>
+          <th>ヒルドイド<br>ソフト軟膏</th>
+          <th>ヒルドイド<br>ローション</th>
+          <th>後発<br>ローション<br>（ニプロ）</th>
+          <th>後発<br>ローション<br>「ニットー」</th>
+          <th>ヒルドイド<br>フォーム</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>基剤タイプ</td><td>O/W</td><td>W/O</td><td>W/O</td><td>W/O</td><td>O/W乳液</td><td>水性</td><td>O/W乳液</td><td>水性エアゾール</td></tr>
+        <tr><td>ラノリンアルコール</td><td><span class="tag tag-orange">含有 ⚠</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>サラシミツロウ</td><td>—</td><td>—</td><td><span class="tag tag-orange">含有</span></td><td><span class="tag tag-orange">含有</span></td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>スクワラン</td><td>—</td><td><span class="tag tag-green">含有</span></td><td><span class="tag tag-green">含有</span></td><td><span class="tag tag-green">含有</span></td><td><span class="tag tag-green">含有</span></td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>BHT（酸化防止剤）</td><td>—</td><td><span class="tag tag-blue">含有</span></td><td><span class="tag tag-blue">含有</span></td><td><span class="tag tag-blue">含有</span></td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>EDTA</td><td>—</td><td><span class="tag tag-blue">含有</span></td><td><span class="tag tag-blue">含有</span></td><td><span class="tag tag-blue">含有</span></td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>パラベン</td><td><span class="tag tag-orange">両方</span></td><td><span class="tag tag-orange">両方</span></td><td><span class="tag tag-orange">両方</span></td><td><span class="tag tag-orange">両方</span></td><td><span class="tag tag-orange">両方</span></td><td><span class="tag tag-orange">両方</span></td><td>—（ニットーはチモール）</td><td><span class="tag tag-orange">両方</span></td></tr>
+        <tr><td>チモール（パラベン代替）</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="tag tag-green">含有★ ハーブ臭あり</span></td><td>—</td></tr>
+        <tr><td>ヒアルロン酸Na</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—（ビーソフテン泡のみ含有）</td></tr>
+        <tr><td>可燃性噴射剤LPG</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="tag tag-red">含有 🔥</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="caution-card blue" style="margin-top:8px;">
+    <h4>ℹ️ 添加物感作・過敏症対応のポイント</h4>
+    <ul>
+      <li>パラベン過敏症の患者：このグループで<strong>唯一のパラベンフリーはニットーローション（チモール防腐）</strong>。ただしタイム由来の独特なハーブ臭があり、顔や匂いに敏感な患者には事前説明が必要。</li>
+      <li>ラノリン過敏：ヒルドイドクリーム（先発）を避け、後発O/Wクリームまたはソフト軟膏後発品を選択。</li>
+      <li>ミツバチ産物過敏（サラシミツロウ）：ニプロ油性クリームとヒルドイドソフト軟膏を避ける。日医工油性クリームは非含有。</li>
+      <li>先発→後発変更時はO/W→W/Oの基剤変化を患者に説明。べたつき増加・保湿増強の変化が生じる可能性がある。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ③ 部位別 -->
+<section id="sites" class="section">
+  <div class="section-title"><span class="icon">🗺</span>部位・皮疹タイプ別　選択ガイド</div>
+
+  <div class="site-guide">
+    <h3>🔸 部位別推奨剤形</h3>
+    <div class="site-grid">
+      <div class="site-item">
+        <h4>👦 顔・頸部</h4>
+        <p>🟡 クリーム ／ 🟢 ローション<br>
+        <small>べたつき少・閉塞性低。ニキビ合併時はローション推奨</small></p>
+      </div>
+      <div class="site-item">
+        <h4>🦱 頭皮</h4>
+        <p>🟣 フォーム ／ 🟢 ローション ／ <span style="color:var(--accent);font-weight:700;">後発水性スプレー</span><br>
+        <small>ポンプ式水性スプレー（日本臓器・ニットー等）が頭皮用途では最も使いやすい。毛髪をかき分けながら直接噴霧でき、乾後もべたつきゼロ。200g大容量があり頭皮全体への毎日使用に向く。LPG不使用で火気リスクなし。ヒルドイドフォーム（金属缶）より実用性で上回る場面が多い。</small></p>
+      </div>
+      <div class="site-item">
+        <h4>💪 体幹・四肢広範</h4>
+        <p>🟡 クリーム ／ 🟢 ローション<br>
+        <small>べたつきが少なく広範囲塗布しやすい</small></p>
+      </div>
+      <div class="site-item">
+        <h4>✋ 手・踵（乾燥強）</h4>
+        <p>🔵 ソフト軟膏<br>
+        <small>W/O基剤の閉塞効果で保湿持続。特に踵ひびわれに有効</small></p>
+      </div>
+      <div class="site-item">
+        <h4>🍼 乳幼児全身</h4>
+        <p>🟡 クリーム<br>
+        <small>低刺激・伸びやすく塗りやすい。フォームは噴射音で嫌がることあり</small></p>
+      </div>
+      <div class="site-item">
+        <h4>🦵 下腿（湿潤傾向）</h4>
+        <p>🟢 ローション ／ 🟡 クリーム<br>
+        <small>ソフト軟膏は閉塞して滲出液貯留リスク</small></p>
+      </div>
+      <div class="site-item">
+        <h4>🙋 関節部・屈曲部</h4>
+        <p>🟡 クリーム ／ 🟣 フォーム<br>
+        <small>動作時のずれが少なく塗布しやすい</small></p>
+      </div>
+      <div class="site-item">
+        <h4>👴 高齢者（全身乾燥）</h4>
+        <p>🟡 クリーム ／ 🟣 フォーム<br>
+        <small>フォームは手に取りやすく、セルフケアのアドヒアランス向上</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>皮疹タイプ</th>
+          <th>第一選択</th>
+          <th>注意・理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>乾燥性皮疹（落屑・落屑性紅斑）</td>
+          <td><span class="tag tag-blue">ソフト軟膏</span><span class="tag tag-green">クリーム</span></td>
+          <td>保湿持続優先。ソフト軟膏が最適</td>
+        </tr>
+        <tr>
+          <td>湿潤性・滲出液多い</td>
+          <td><span class="tag tag-green">ローション</span><span class="tag tag-purple">フォーム</span></td>
+          <td>ソフト軟膏は閉塞→悪化リスクあり</td>
+        </tr>
+        <tr>
+          <td>角化・ひびわれ</td>
+          <td><span class="tag tag-blue">ソフト軟膏</span></td>
+          <td>浸透・閉塞効果で角質層修復</td>
+        </tr>
+        <tr>
+          <td>アトピー性皮膚炎（乾燥期）</td>
+          <td><span class="tag tag-green">クリーム</span><span class="tag tag-blue">ソフト軟膏</span></td>
+          <td>部位により使い分け推奨</td>
+        </tr>
+        <tr>
+          <td>魚鱗癬</td>
+          <td><span class="tag tag-blue">ソフト軟膏</span><span class="tag tag-green">クリーム</span></td>
+          <td>入浴後の保湿タイミングが重要</td>
+        </tr>
+        <tr>
+          <td>静脈性浮腫・うっ滞性皮膚炎</td>
+          <td><span class="tag tag-green">クリーム</span><span class="tag tag-purple">ローション</span></td>
+          <td>血行促進作用も期待</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ④ 使用感 -->
+<section id="feel" class="section">
+  <div class="section-title"><span class="icon">✋</span>使用感　レーダー評価</div>
+
+  <div class="feel-section">
+    <h3>🟡 ヒルドイドクリーム</h3>
+    <div class="feel-row">
+      <div class="feel-label">保湿持続性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:70%;background:#d4a836;"></div></div>
+      </div>
+      <div class="feel-score">7/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">べたつきのなさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:75%;background:#d4a836;"></div></div>
+      </div>
+      <div class="feel-score">7.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">塗布のしやすさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:80%;background:#d4a836;"></div></div>
+      </div>
+      <div class="feel-score">8/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">広範囲への適性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:80%;background:#d4a836;"></div></div>
+      </div>
+      <div class="feel-score">8/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">アドヒアランス</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:75%;background:#d4a836;"></div></div>
+      </div>
+      <div class="feel-score">7.5</div>
+    </div>
+  </div>
+
+  <div class="feel-section">
+    <h3>🔵 ヒルドイドソフト軟膏</h3>
+    <div class="feel-row">
+      <div class="feel-label">保湿持続性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:95%;background:#5b8dd9;"></div></div>
+      </div>
+      <div class="feel-score">9.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">べたつきのなさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:30%;background:#5b8dd9;"></div></div>
+      </div>
+      <div class="feel-score">3/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">塗布のしやすさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:50%;background:#5b8dd9;"></div></div>
+      </div>
+      <div class="feel-score">5/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">広範囲への適性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:55%;background:#5b8dd9;"></div></div>
+      </div>
+      <div class="feel-score">5.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">アドヒアランス</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:50%;background:#5b8dd9;"></div></div>
+      </div>
+      <div class="feel-score">5/10</div>
+    </div>
+  </div>
+
+  <div class="feel-section">
+    <h3>🟢 ヒルドイドローション</h3>
+    <div class="feel-row">
+      <div class="feel-label">保湿持続性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:55%;background:#3bab7c;"></div></div>
+      </div>
+      <div class="feel-score">5.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">べたつきのなさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:90%;background:#3bab7c;"></div></div>
+      </div>
+      <div class="feel-score">9/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">塗布のしやすさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:85%;background:#3bab7c;"></div></div>
+      </div>
+      <div class="feel-score">8.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">広範囲への適性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:85%;background:#3bab7c;"></div></div>
+      </div>
+      <div class="feel-score">8.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">アドヒアランス</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:85%;background:#3bab7c;"></div></div>
+      </div>
+      <div class="feel-score">8.5</div>
+    </div>
+  </div>
+
+  <div class="feel-section">
+    <h3>🟣 ヒルドイドフォーム（泡）</h3>
+    <div class="feel-row">
+      <div class="feel-label">保湿持続性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:55%;background:#9b59b6;"></div></div>
+      </div>
+      <div class="feel-score">5.5</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">べたつきのなさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:90%;background:#9b59b6;"></div></div>
+      </div>
+      <div class="feel-score">9/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">塗布のしやすさ</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:90%;background:#9b59b6;"></div></div>
+      </div>
+      <div class="feel-score">9/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">広範囲への適性</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:80%;background:#9b59b6;"></div></div>
+      </div>
+      <div class="feel-score">8/10</div>
+    </div>
+    <div class="feel-row">
+      <div class="feel-label">アドヒアランス</div>
+      <div class="feel-bar-wrap">
+        <div class="feel-bar-track"><div class="feel-bar-fill" style="width:90%;background:#9b59b6;"></div></div>
+      </div>
+      <div class="feel-score">9/10</div>
+    </div>
+    <p style="font-size:11.5px;color:var(--text-light);margin-top:8px;">※ 薬価は最も高い。小児では噴射音による恐怖感に注意。</p>
+  </div>
+</section>
+
+<!-- ⑤ 後発品・薬価 -->
+<section id="generics" class="section">
+  <div class="section-title"><span class="icon">💊</span>後発品一覧　薬価（2024年度）</div>
+
+  <div class="generic-note">
+    ⚠️ 薬価は改定により変動します。最新情報は薬価基準を確認してください。後発品は「ヘパリン類似物質」として収載。
+  </div>
+
+  <div class="generic-section">
+    <h3>🟡 クリーム（ヘパリン類似物質クリーム 0.3%）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>製品名</th><th>会社</th><th>薬価</th><th>規格</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ヒルドイドクリーム（先発）</td><td>マルホ</td><td>16.6円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質クリーム「日医工」</td><td>日医工</td><td>6.1円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質クリーム「ニプロ」</td><td>ニプロ</td><td>6.1円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質クリーム「YD」</td><td>陽進堂</td><td>6.1円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質クリーム「サンド」</td><td>サンド</td><td>6.1円/g</td><td>25g・50g</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="generic-section">
+    <h3>🔵 ソフト軟膏（ヘパリン類似物質軟膏 0.3%）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>製品名</th><th>会社</th><th>薬価</th><th>規格</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ヒルドイドソフト軟膏（先発）</td><td>マルホ</td><td>16.6円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質軟膏「日医工」</td><td>日医工</td><td>6.1円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質軟膏「ニプロ」</td><td>ニプロ</td><td>6.1円/g</td><td>25g・50g・100g</td></tr>
+          <tr><td>ヘパリン類似物質軟膏「YD」</td><td>陽進堂</td><td>6.1円/g</td><td>25g・50g</td></tr>
+          <tr><td>ヘパリン類似物質軟膏「ラクール」</td><td>ラクール薬品</td><td>6.1円/g</td><td>25g・50g</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="generic-section">
+    <h3>🟢 ローション（ヘパリン類似物質ローション 0.3%）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>製品名</th><th>会社</th><th>薬価</th><th>規格</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ヒルドイドローション（先発）</td><td>マルホ</td><td>14.6円/mL</td><td>25mL・50mL・<strong>150g（ポンプ付）</strong></td></tr>
+          <tr><td>ヘパリン類似物質ローション「日医工」</td><td>日医工</td><td>5.6円/mL</td><td>25mL・50mL・100mL</td></tr>
+          <tr><td>ヘパリン類似物質ローション「ニプロ」</td><td>ニプロ</td><td>5.6円/mL</td><td>25mL・50mL</td></tr>
+          <tr><td>ヘパリン類似物質ローション「YD」</td><td>陽進堂</td><td>5.6円/mL</td><td>25mL・50mL</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="generic-section">
+    <h3>🟣 フォーム・泡（ヘパリン類似物質外用泡状スプレー 0.3%）</h3>
+    <div class="generic-note" style="background:var(--primary-light);border-left-color:var(--primary);">
+      ⚠️ <strong>容器の構造が先発と後発で全く異なります：</strong><br>
+      ヒルドイドフォーム（先発）＝<strong>金属缶＋LPGガス圧</strong> → 92g・火気厳禁<br>
+      後発泡スプレー＝<strong>プラスチックボトル＋ポンプ式</strong> → 100g・200g・火気リスクなし
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>製品名</th><th>会社</th><th>薬価</th><th>規格・容器</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ヒルドイドフォーム（先発）</td><td>マルホ</td><td>約43.5円/g</td><td><strong>原液92g</strong>・金属缶（LPGガス）</td></tr>
+          <tr><td>ヘパリン類似物質外用泡状スプレー「ニットー」</td><td>日東メディック</td><td>約18〜20円/g</td><td>100g・<strong>200g</strong>・プラスチックボトル</td></tr>
+          <tr><td>ヘパリン類似物質外用泡状スプレー「日本臓器」</td><td>日本臓器製薬</td><td>約18〜20円/g</td><td>100g・<strong>200g</strong>・プラスチックボトル（ヒアルロン酸Na含有）</td></tr>
+          <tr><td>ヘパリン類似物質外用泡状スプレー「PP」</td><td>サンファーマ</td><td>約18〜20円/g</td><td>100g・<strong>200g</strong>・プラスチックボトル</td></tr>
+          <tr><td>ヘパリン類似物質外用泡状スプレー「日医工」</td><td>日医工</td><td>約18〜20円/g</td><td>100g・プラスチックボトル</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11.5px;color:var(--text-light);margin-top:6px;">※ 先発92g↔後発100gの規格違い変更は、供給不安時に限り患者同意のうえ疑義照会なしで可能（2024年3月厚労省通知）。200g規格は後発品のみ。</p>
+  </div>
+</section>
+
+<!-- ⑥ 禁忌・注意 -->
+<section id="caution" class="section">
+  <div class="section-title"><span class="icon">⚠️</span>禁忌・注意事項</div>
+
+  <div class="caution-grid">
+    <div class="caution-card red">
+      <h4>🚫 禁忌（全剤形共通）</h4>
+      <ul>
+        <li>出血性血液疾患（血友病・血小板減少性紫斑病など）</li>
+        <li>出血部位への使用</li>
+        <li>本剤成分への過敏症既往</li>
+      </ul>
+    </div>
+    <div class="caution-card orange">
+      <h4>⚠️ 慎重投与・注意</h4>
+      <ul>
+        <li>ヘパリン過敏症の既往（類薬交叉反応の可能性）</li>
+        <li>感染・糜爛面への直接塗布（二次感染リスク）</li>
+        <li>ソフト軟膏：湿潤・滲出面に使用しない</li>
+        <li>フォーム：眼・粘膜・口腔・鼻腔への噴霧不可</li>
+        <li>フォーム：小児への使用時は保護者管理</li>
+        <li>フォーム：火気・高温環境での保管禁止（エアゾール）</li>
+      </ul>
+    </div>
+    <div class="caution-card blue">
+      <h4>ℹ️ その他の注意</h4>
+      <ul>
+        <li>抗凝固薬（ワルファリン等）との相互作用：大量塗布では理論上注意（臨床上問題となることは少ない）</li>
+        <li>ローション：揮発成分含む場合あり、眼周囲注意</li>
+        <li>一般的副作用：発赤・そう痒感（頻度稀）</li>
+        <li>保管：直射日光・高温多湿を避ける</li>
+      </ul>
+    </div>
+    <div class="caution-card red">
+      <h4>🟣 フォーム特有の注意</h4>
+      <ul>
+        <li>エアゾール製剤のため火気厳禁</li>
+        <li>50°C以上で破裂リスク：車内放置禁止</li>
+        <li>噴射口を顔に向けない</li>
+        <li>密閉容器中に噴射しない</li>
+        <li>廃棄時は中身を使い切り分別</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>症例・状況</th>
+          <th>推奨対応</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>感染性皮膚炎（とびひ等）</td>
+          <td>保湿剤よりも抗菌薬治療を優先。治癒後に保湿を再開</td>
+        </tr>
+        <tr>
+          <td>ステロイド外用との併用</td>
+          <td>問題なし。保湿剤→ステロイドの順か、別部位に塗布</td>
+        </tr>
+        <tr>
+          <td>褥瘡・皮膚潰瘍</td>
+          <td>ヒルドイドは適応外。専用創傷被覆材を選択</td>
+        </tr>
+        <tr>
+          <td>乳幼児への全身塗布</td>
+          <td>クリームが最適。フォームは誤飲・噴射音リスクに注意</td>
+        </tr>
+        <tr>
+          <td>血液凝固障害患者</td>
+          <td>禁忌。使用しない</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<div class="footer-note">
+  本資料は院内参考資料です。薬価は2024年度改定値を参考にしており、最新の薬価基準をご確認ください。<br>
+  やまもと皮膚科・漢方クリニック
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
